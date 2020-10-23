@@ -14,16 +14,16 @@ function getCountryByRegion(){
        data.forEach(country =>{
            let htmlSegment = `
                
-               <div class="col-md-3 mt-4">
-               <div class="card" style="width: 13rem;">
+               <div class="col col-md-3 mt-4">
+               <div class="card" style="width:;">
      <img src="${country.flag}" class="card-img-top" alt="...">
      <div class="card-body">
        <h5 class="card-title">${country.name}</h5>
       
                    <ul>
                        <li>Population: ${country.population}</li>
-                       <li>Region:${country.region}</li>
-                       <li>Capital:${country.capital}</li>
+                       <li>Region: ${country.region}</li>
+                       <li>Capital: ${country.capital}</li>
                    </ul>
      </div>
    </div>
@@ -58,7 +58,7 @@ function searchCountry(){
     avengers.forEach(newCoountry =>{
       let htmlSegment = `
                
-      <div class="col-md-3 mt-4">
+      <div class="col-md-3 col-sm-6 col-xs-6 mt-4">
       <div class="card" style="width: 13rem;">
 <img src="${newCoountry.flag}" class="card-img-top" alt="...">
 <div class="card-body">
@@ -66,8 +66,8 @@ function searchCountry(){
 
           <ul>
               <li>Population: ${newCoountry.population}</li>
-              <li>Region:${newCoountry.region}</li>
-              <li>Capital:${newCoountry.capital}</li>
+              <li>Region: ${newCoountry.region}</li>
+              <li>Capital: ${newCoountry.capital}</li>
           </ul>
 </div>
 </div>
@@ -79,6 +79,7 @@ html += htmlSegment;
     let container = document.querySelector('.testy');
     container.innerHTML = html;
   })
+  .err(err => console.log(err))
 }
 
 

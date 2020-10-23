@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <div class="header shadow">
-        <div class="one">
+    <div class="header shadow container-fluid">
+        <div class="one ml-4">
             <h3>Where in the world?</h3>
         </div>
         <div class="three">
@@ -22,21 +22,24 @@
 
     
     <div class="bodyflags mt-4">
-    <div class="sub header">
-    <div id="search">
-        <input type="text" name="" id="searchInput" placeholder="Search for a country..." onkeyup="searchCountry()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"><path fill-rule="evenodd" d="M14.53 15.59a8.25 8.25 0 111.06-1.06l5.69 5.69a.75.75 0 11-1.06 1.06l-5.69-5.69zM2.5 9.25a6.75 6.75 0 1111.74 4.547.746.746 0 00-.443.442A6.75 6.75 0 012.5 9.25z"></path></svg>
+    <div class="container">
+    <div class="row justify-content-between">
 
+        <div class="col-4" id="search">
+            <input type="text" name="" id="searchInput" placeholder="Search for a country..." onkeyup="searchCountry()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15"><path fill-rule="evenodd" d="M14.53 15.59a8.25 8.25 0 111.06-1.06l5.69 5.69a.75.75 0 11-1.06 1.06l-5.69-5.69zM2.5 9.25a6.75 6.75 0 1111.74 4.547.746.746 0 00-.443.442A6.75 6.75 0 012.5 9.25z"></path></svg>
+    
+        </div>
+        <div class="col-4 pull-right" id="filter">
+        <select name="" id="filters" onchange="getCountryByRegion()">
+            <option value="Africa">Africa</option>
+            <option value="americas">Americas</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+        </select>
     </div>
-    <div id="filter">
-    <select name="" id="filters" onchange="getCountryByRegion()">
-        <option value="Africa">Africa</option>
-        <option value="americas">Americas</option>
-        <option value="asia">Asia</option>
-        <option value="europe">Europe</option>
-        <option value="oceania">Oceania</option>
-    </select>
-</div>
+    </div>
     </div>
 
     <div class="container">
