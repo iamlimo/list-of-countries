@@ -4,6 +4,12 @@ html, body{
     background-color: #f1f1f1;
 }
 
+.darkmode-toggle{
+    position: relative;
+    z-index: 5;
+    content: "Darkmode";
+}
+
 svg{
     position: relative;
     left: -40px;
